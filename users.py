@@ -55,8 +55,7 @@ stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 
-db_name = 'https://github.com/Magzhan05070300/users/blob/main/db/database.db'
-conn = sqlite3.connect(db_name)
+conn = sqlite3.connect('db/database.db', check_same_thread=False)
 cursor = conn.cursor()
 
 @bot.message_handler(commands=['start'])

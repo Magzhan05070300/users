@@ -12,9 +12,16 @@ server = Flask(__name__)
 
 @bot.message_handler(commands=['start'])
 def first(message):
-    bot.send_message(message.chat.id, 'Сәлеметсіз бе USER!')
     bot2.send_message(message.chat.id, 'Сәлеметсіз бе ADMIN!')
+    bot.send_message(message.chat.id, 'Сәлеметсіз бе USER!')
+ 
 
+@server.route('/' + TOKEN2, methods=['POST'])
+def get_message2():
+    json_string2 = request.get_data().decode('utf-8')
+    update2 = telebot.types.Update.de_json(json_string2)
+    bot2.process_new_updates([update2])
+    return '!', 200
 
 @server.route('/' + TOKEN, methods=['POST'])
 def get_message():
@@ -23,24 +30,19 @@ def get_message():
     bot.process_new_updates([update])
     return '!', 200
 
-@server.route('/' + TOKEN2, methods=['POST'])
-def get_message2():
-    json_string = request.get_data().decode('utf-8')
-    update = telebot.types.Update.de_json(json_string)
-    bot2.process_new_updates([update])
-    return '!', 200
 
+@server.route('/')
+def webhook2():
+    bot2.remove_webhook()
+    bot2.set_webhook(url=APP_URL2)
+    return '!', 200
 
 @server.route('/')
 def webhook():
     bot.remove_webhook()
     bot.set_webhook(url=APP_URL)
     return '!', 200
-@server.route('/')
-def webhook2():
-    bot2.remove_webhook()
-    bot2.set_webhook(url=APP_URL2)
-    return '!', 200
+
 
 
 if __name__ == '__main__':

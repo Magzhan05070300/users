@@ -3,6 +3,7 @@ from flask import Flask, request
 import sqlite3
 import telebot
 from telebot import types
+from pathlib import Path
 
 TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
 APP_URL = f'https://usersstudentline.herokuapp.com/{TOKEN}'
@@ -55,7 +56,8 @@ stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 
-conn = sqlite3.connect('db/database.db', check_same_thread=False)
+path = Path("main/db/database.db")
+conn = sqlite3.connect(path, check_same_thread=False)
 cursor = conn.cursor()
 
 @bot.message_handler(commands=['start'])

@@ -56,9 +56,8 @@ stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 
-repo = g.get_repo("PyGithub/PyGithub")
-b = repo.get_branch(branch="main")
-file = repo.get_contents(path="db/database.db", ref=b)
+repo = g.get_repo("Magzhan05070300/users")
+file = repo.get_contents(path="db/database.db")
 
 conn = sqlite3.connect(file, check_same_thread=False)
 cursor = conn.cursor()

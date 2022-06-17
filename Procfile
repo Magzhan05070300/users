@@ -1,1 +1,1 @@
-web: python3 users.py
+web: python users.py

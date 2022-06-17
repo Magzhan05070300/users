@@ -58,7 +58,7 @@ showKezek = "Нөмір қабылдануда!"
 
 repo = g.get_repo("PyGithub/PyGithub")
 b = repo.get_branch(branch="main")
-file = repo.get_contents(path="db/database.db", ref=b.commit.sha)
+file = repo.get_contents(path="db/database.db", ref=b)
 
 conn = sqlite3.connect(file, check_same_thread=False)
 cursor = conn.cursor()

@@ -57,7 +57,7 @@ homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 
 repo = g.get_repo("Magzhan05070300/users")
-file = repo.get_contents(path="db/database.db")
+file = repo.get_contents("db/database.db")
 
 conn = sqlite3.connect(file, check_same_thread=False)
 cursor = conn.cursor()

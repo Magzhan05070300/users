@@ -56,7 +56,7 @@ stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 
-path = Path("db/database.db")
+path = Path("blob/main/db/database.db")
 conn = sqlite3.connect(path, check_same_thread=False)
 cursor = conn.cursor()
 

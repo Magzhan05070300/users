@@ -55,7 +55,7 @@ stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 
-db_name = "https://drive.google.com/file/d/1JqulSeSH9_hIyrOSBkaNcIo9MnP2Zz2s/view?usp=sharing"
+db_name = 'https://github.com/Magzhan05070300/users/blob/main/db/database.db'
 conn = sqlite3.connect(db_name)
 cursor = conn.cursor()
 

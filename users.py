@@ -5,6 +5,7 @@ import telebot
 TOKEN = '5287178701:AAGqjOQohzho-G0wl48-zYNBCcRxW9JC_ic'
 TOKEN2 = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
 APP_URL = f'https://usersstudentline.herokuapp.com/{TOKEN}'
+APP_URL2 = f'https://adminstudentsline.herokuapp.com/{TOKEN2}'
 bot = telebot.TeleBot(TOKEN)
 bot2 = telebot.TeleBot(TOKEN2)
 server = Flask(__name__)
@@ -41,7 +42,7 @@ def webhook():
 @server.route('/')
 def webhook2():
     bot2.remove_webhook()
-    bot2.set_webhook(url=APP_URL)
+    bot2.set_webhook(url=APP_URL2)
     return '!', 200
 
 

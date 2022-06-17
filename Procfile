@@ -1,2 +1,2 @@
 web: python3 admins.py 
-web: python3 users.py
+worker: python3 users.py

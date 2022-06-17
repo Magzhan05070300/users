@@ -54,11 +54,11 @@ kezekOutBtn = "Кезектен шығу"
 stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
-"""
-b = repo.get_branch(branch="main")
-file = repo.get_contents(path="db/database.db", ref=b.commit.sha)"""
 
-conn = sqlite3.connect("db/database.db", check_same_thread=False)
+b = repo.get_branch(branch="main")
+file = repo.get_contents(path="db/database.db", ref=b.commit.sha)
+
+conn = sqlite3.connect(file, check_same_thread=False)
 cursor = conn.cursor()
 
 @bot.message_handler(commands=['start'])

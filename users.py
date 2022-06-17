@@ -13,9 +13,6 @@ server = Flask(__name__)
 @bot.message_handler(commands=['start'])
 def first(message):
     bot.send_message(message.chat.id, 'Сәлеметсіз бе USER!')
-
-@bot.message_handler(commands=['start'])
-def first(message):
     bot2.send_message(message.chat.id, 'Сәлеметсіз бе ADMIN!')
 
 

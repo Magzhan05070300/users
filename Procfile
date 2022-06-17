@@ -1,1 +1,1 @@
-worker: python users.py & wait -n
+web: python3 users.py && admins.py && wait -n

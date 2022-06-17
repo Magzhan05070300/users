@@ -3,7 +3,8 @@ from flask import Flask, request
 import sqlite3
 import telebot
 from telebot import types
-
+from github import Github
+g = Github()
 TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
 APP_URL = f'https://usersstudentline.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
@@ -55,6 +56,7 @@ stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 
+repo = g.get_repo("PyGithub/PyGithub")
 b = repo.get_branch(branch="main")
 file = repo.get_contents(path="db/database.db", ref=b.commit.sha)
 

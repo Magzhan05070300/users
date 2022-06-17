@@ -12,9 +12,10 @@ server = Flask(__name__)
 
 @bot.message_handler(commands=['start'])
 def first(message):
-    bot2.send_message(message.chat.id, 'Сәлеметсіз бе ADMIN!')
     bot.send_message(message.chat.id, 'Сәлеметсіз бе USER!')
- 
+def second(message):
+    bot2.send_message(message.chat.id, 'Сәлеметсіз бе ADMIN!')
+
 
 @server.route('/' + TOKEN2, methods=['POST'])
 def get_message2():

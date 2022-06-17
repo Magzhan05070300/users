@@ -12,7 +12,7 @@ server = Flask(__name__)
 @bot.message_handler(commands=['start'])
 def first(message):
     bot.send_message(message.chat.id, 'Сәлеметсіз бе USER!')
-    
+
 @bot.message_handler(commands=['start'])
 def first(message):
     bot2.send_message(message.chat.id, 'Сәлеметсіз бе ADMIN!')
@@ -24,8 +24,9 @@ def get_message():
     update = telebot.types.Update.de_json(json_string)
     bot.process_new_updates([update])
     return '!', 200
+
 @server.route('/' + TOKEN2, methods=['POST'])
-def get_message():
+def get_message2():
     json_string = request.get_data().decode('utf-8')
     update = telebot.types.Update.de_json(json_string)
     bot2.process_new_updates([update])
@@ -38,7 +39,7 @@ def webhook():
     bot.set_webhook(url=APP_URL)
     return '!', 200
 @server.route('/')
-def webhook():
+def webhook2():
     bot2.remove_webhook()
     bot2.set_webhook(url=APP_URL)
     return '!', 200

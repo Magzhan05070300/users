@@ -1,1 +1,1 @@
-web: python3 users.py && python3 admins.py
+web: python3 users.py, admins.py

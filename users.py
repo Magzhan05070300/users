@@ -54,9 +54,10 @@ kezekOutBtn = "Кезектен шығу"
 stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
+
 db_name = "https://drive.google.com/file/d/1JqulSeSH9_hIyrOSBkaNcIo9MnP2Zz2s/view?usp=sharing"
-conn = sqlite3.connect()
-cursor = conn.cursor(db_name)
+conn = sqlite3.connect(db_name)
+cursor = conn.cursor()
 
 @bot.message_handler(commands=['start'])
 def first(message):

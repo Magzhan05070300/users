@@ -17,6 +17,11 @@ contents = repo.get_contents("db/database.db")
 conn = sqlite3.connect(contents.sha)
 cursor = conn.cursor()
 
+def db_table_val1(user_id: int, user_name: str, user_surname: str, username: str):
+    cursor.execute('INSERT OR IGNORE INTO db_f_1 (user_id, user_name, user_surname, username) VALUES (?, ?, ?, ?)',
+                   (user_id, user_name, user_surname, username))
+    conn.commit()
+
 #file = repo.get_content("database.db")
 #branch = repo.get_branch(branch="main")
 """
@@ -29,13 +34,19 @@ contents = repo.get_contents("database.db", ref="database", branch="main")"""
 @bot.message_handler(commands=['start'])
 def first(message):
     bot.send_message(message.chat.id, 'Сәлеметсіз бе!')
-    cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
-    check_for_null = cursor.fetchall()
-    conn.commit()
-    if check_for_null[0][0] == 0:
-        bot.send_message(message.chat.id, "Кезекте студент жоқ!")
-    else:
-        bot.send_message(message.chat.id, "Кезекте студент бар!")
+    us_id = message.from_user.id
+    us_name = message.from_user.first_name
+    us_sname = message.from_user.last_name
+    username = message.from_user.username
+
+    db_table_val1(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
+
+    id_input = us_id
+    cursor.execute("SELECT id FROM db_f_1 WHERE user_id=?", (id_input,))
+
+    for result in cursor:
+        bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
+        bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
            
 @server.route('/' + TOKEN, methods=['POST'])
 def get_message():

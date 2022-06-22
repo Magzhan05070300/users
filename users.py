@@ -1,11 +1,15 @@
 import os
 from flask import Flask, request
 import telebot
+import github
 
 TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
 APP_URL = f'https://lineappcreater.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
+
+b = github()
+b.get_contents(ref="main")
 
 @bot.message_handler(commands=['start'])
 def first(message):

@@ -10,7 +10,7 @@ server = Flask(__name__)
 
 g = github.Github("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")
 user = g.get_user()
-repo = user.get_repo()
+repo = user.get_repo('users')
 """
 repo = g.get_repo("users")
 contents = repo.get_contents("database.db", ref="database", branch="main")"""

@@ -1,3 +1,4 @@
 pyTelegramBotAPI==4.5.1
 Flask==2.1.2
 PyGithub==1.55
+mysql-connector==2.2.9

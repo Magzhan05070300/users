@@ -46,8 +46,8 @@ def first(message):
     cursor.execute("SELECT id FROM db_f_1 WHERE user_id=?", (id_input,))
 
     for result in cursor:
-        bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
-        bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+    bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
+    bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
            
 @server.route('/' + TOKEN, methods=['POST'])
 def get_message():

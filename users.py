@@ -12,15 +12,15 @@ server = Flask(__name__)
 
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")
-contents = repo.get_contents("db/database.db")
+#contents = repo.get_contents("db/database.db")
 
-conn = sqlite3.connect(contents.sha)
-cursor = conn.cursor()
+repo.conn = sqlite3.connect("db/database.db")
+cursor = repo.conn.cursor()
 
 def db_table_val1(user_id: int, user_name: str, user_surname: str, username: str):
     cursor.execute('INSERT OR IGNORE INTO db_f_1 (user_id, user_name, user_surname, username) VALUES (?, ?, ?, ?)',
                    (user_id, user_name, user_surname, username))
-    conn.commit()
+    repo.conn.commit()
 
 #file = repo.get_content("database.db")
 #branch = repo.get_branch(branch="main")

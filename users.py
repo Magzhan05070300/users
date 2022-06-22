@@ -31,6 +31,7 @@ def first(message):
     bot.send_message(message.chat.id, 'Сәлеметсіз бе!')
     cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
     check_for_null = cursor.fetchall()
+    conn.commit()
     if check_for_null[0][0] == 0:
         bot.send_message(message.chat.id, "Кезекте студент жоқ!")
     else:

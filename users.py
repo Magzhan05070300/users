@@ -8,7 +8,7 @@ APP_URL = f'https://jenpulineochered.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
-g = github.Github(login="magzhan.iitu.kz@mail.ru", password="Qwerty1201199445")
+g = github.Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 
 """
 user = g.get_user()

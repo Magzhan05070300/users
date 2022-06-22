@@ -9,10 +9,10 @@ TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
 APP_URL = f'https://jenpulineochered.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
-
+"""
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")
-contents = repo.get_contents("db/database.db")
+contents = repo.get_contents("db/database.db")"""
 
 conn = sqlite3.connect("db/database.db")
 cursor = conn.cursor()
@@ -29,6 +29,7 @@ contents = repo.get_contents("database.db", ref="database", branch="main")"""
 
 @bot.message_handler(commands=['start'])
 def first(message):
+    bot.send_message(message.chat.id, "Кезек")
     cursor.execute("SELECT id FROM db_f_1 LIMIT 1")
     for get_user_id in cursor:
         bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))

@@ -213,8 +213,8 @@ def fakultetF1(message):
         for result in cursor:
             print(result[0])
 
-        bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
-        bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+            bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
+            bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_1''')

@@ -38,6 +38,7 @@ def first(message):
     us_name = message.from_user.first_name
     us_sname = message.from_user.last_name
     username = message.from_user.username
+    bot.send_message(message.chat.id, us_id)
 
     db_table_val1(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 

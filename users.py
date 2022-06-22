@@ -9,8 +9,9 @@ bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
 g = github.Github("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")
+"""
 repo = g.get_repo("PyGithub/PyGithub")
-contents = repo.get_contents("database.db", ref="database", branch="main")
+contents = repo.get_contents("database.db", ref="database", branch="main")"""
 
 @bot.message_handler(commands=['start'])
 def first(message):

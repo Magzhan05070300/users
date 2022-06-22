@@ -11,8 +11,8 @@ bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
-repo = g.get_repo("Magzhan05070300/dbase")
-contents = repo.get_contents("database.db")
+repo = g.get_repo("Magzhan05070300/users")
+contents = repo.get_contents("db/database.db")
 
 conn = sqlite3.connect(contents.sha)
 cursor = conn.cursor()

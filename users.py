@@ -13,7 +13,7 @@ g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/dbase")
 contents = repo.get_contents("database.db")
 
-conn = sqlite3.connect("db/database.db", check_same_thread=False)
+conn = sqlite3.connect("db/database.db")
 cursor = conn.cursor()
 
 #file = repo.get_content("database.db")

@@ -201,6 +201,12 @@ def fakultetF1(message):
         id_input = us_id
         cursor.execute("SELECT id FROM db_f_1 WHERE user_id=?", (id_input,))
 
+        for result in cursor:
+            print(result[0])
+
+            bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
+            bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+            
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
@@ -208,13 +214,8 @@ def fakultetF1(message):
         keyboard.add(homePage)
         keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
-        bot.register_next_step_handler(send, fakultetF1)
-
-        for result in cursor:
-            print(result[0])
-
-            bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
-            bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        bot.register_next_step_handler(send, fakultetF1)    
+        
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_1''')

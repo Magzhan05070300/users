@@ -1,2 +1,1 @@
-web: python3 users.py
-web: node admin.js
+web: python3 users.py and admins.py

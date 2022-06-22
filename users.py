@@ -4,7 +4,7 @@ import telebot
 import github
 
 TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
-APP_URL = f'https://lineappcreater.herokuapp.com/{TOKEN}'
+APP_URL = f'https://jenpulineochered.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 

@@ -8,8 +8,9 @@ APP_URL = f'https://lineappcreater.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
-b = github()
-b.get_contents(ref="main")
+g = github.Github("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")
+repo = g.get_user().get_repo("users")
+file = repo.get_file_contents("db/database.db")
 
 @bot.message_handler(commands=['start'])
 def first(message):

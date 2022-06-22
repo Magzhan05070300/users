@@ -9,7 +9,8 @@ bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
 g = github.Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
-repo = g.get_repo()
+user = g.get_user()
+
 """
 user = g.get_user()
 repo = g.get_repo()

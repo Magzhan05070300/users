@@ -30,14 +30,15 @@ contents = repo.get_contents("database.db", ref="database", branch="main")"""
 def first(message):
     bot.send_message(message.chat.id, 'Сәлеметсіз бе!')
     cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
-        check_for_null = cursor.fetchall()
-        print(check_for_null)
-        if check_for_null[0][0] == 0:
-            print("Table no contents")
-            bot.send_message(message.chat.id, "Кезекте студент жоқ!")
-        else:
-            print("Table have contents")
-            bot.send_message(message.chat.id, "Кезекте студент бар!")
+    check_for_null = cursor.fetchall()
+    print(check_for_null)
+    if check_for_null[0][0] == 0:
+        print("Table no contents")
+        bot.send_message(message.chat.id, "Кезекте студент жоқ!")
+        
+    else:
+        print("Table have contents")
+        bot.send_message(message.chat.id, "Кезекте студент бар!")
            
 @server.route('/' + TOKEN, methods=['POST'])
 def get_message():

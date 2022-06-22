@@ -1,16 +1,15 @@
 import os
 from flask import Flask, request
 import telebot
-import github
+from github import Github
 
 TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
 APP_URL = f'https://jenpulineochered.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
-g = github.Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
-user = g.get_user()
-
+g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
+#repo = g.get_repo("PyGithub/PyGithub")
 """
 user = g.get_user()
 repo = g.get_repo()

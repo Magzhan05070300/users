@@ -55,12 +55,12 @@ kezekOutBtn = "Кезектен шығу"
 stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
-"""
+
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")
-contents = repo.get_contents("db/database.db")"""
+contents = repo.get_contents("db/database.db")
 
-conn = sqlite3.connect("db/database.db", check_same_thread=False)
+conn = sqlite3.connect(contents.sha, check_same_thread=False)
 cursor = conn.cursor()
 
 @bot.message_handler(commands=['start'])

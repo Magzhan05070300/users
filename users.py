@@ -10,7 +10,7 @@ server = Flask(__name__)
 
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/dbase")
-contents = repo.get_contents("README.md")
+contents = repo.get_contents("database.db")
 #file = repo.get_content("database.db")
 #branch = repo.get_branch(branch="main")
 """

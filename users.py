@@ -27,11 +27,11 @@ g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")
 contents = repo.get_contents("db/database.sql")"""
 
-connection = mysql.connector.connect(host="proxy.env-9453381.jcloud.kz", 
-                                     port="3306", 
-                                     user="jelastic-5256352", 
-                                     password="O60BFWSCBLbn4yJJiWJ3", 
-                                     database="database") 
+connection = mysql.connector.connect(host='proxy.env-9453381.jcloud.kz',
+                                     port='3306',
+                                     user='jelastic-5256352',
+                                     password='O60BFWSCBLbn4yJJiWJ3',
+                                     database='database')
 
 # conn = sqlite3.connect(contents.sha, check_same_thread=False)
 cursor = connection.cursor()
@@ -43,7 +43,7 @@ def first(message):
     keyboard.add('Мәзір')
     send = bot.send_message(message.chat.id,
                             'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                            'өз факультетіңізді таңдаңыз!', 
+                            'өз факультетіңізді таңдаңыз!',
                             reply_markup=keyboard)
     bot.register_next_step_handler(send, second)
 

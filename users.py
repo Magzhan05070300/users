@@ -23,25 +23,31 @@ kezekOutBtn = "Кезектен шығу"
 stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
-
+"""
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")
-contents = repo.get_contents("db/database.sql")
-connection = mysql.connector.connect(contents.sha)
+contents = repo.get_contents("db/database.sql")"""
 
-#conn = sqlite3.connect(contents.sha, check_same_thread=False)
+connection = mysql.connector.connect(host="proxy.env-9453381.jcloud.kz", port="3306", user="jelastic-5256352",
+                                     password="O60BFWSCBLbn4yJJiWJ3", database="database")
+
+# conn = sqlite3.connect(contents.sha, check_same_thread=False)
 cursor = connection.cursor()
+
 
 @bot.message_handler(commands=['start'])
 def first(message):
-    keyboard = types.ReplyKeyboardMarkup(True,False)
+    keyboard = types.ReplyKeyboardMarkup(True, False)
     keyboard.add('Мәзір')
-    send = bot.send_message(message.chat.id, 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, өз факультетіңізді таңдаңыз!',reply_markup=keyboard)
-    bot.register_next_step_handler(send,second)
+    send = bot.send_message(message.chat.id,
+                            'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, өз факультетіңізді таңдаңыз!',
+                            reply_markup=keyboard)
+    bot.register_next_step_handler(send, second)
+
 
 def second(message):
     if message.text == 'Мәзір':
-        keyboard = types.ReplyKeyboardMarkup(True,False)
+        keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(Fakultet1)
         keyboard.add(Fakultet2)
         keyboard.add(Fakultet3)
@@ -50,16 +56,16 @@ def second(message):
         keyboard.add(Fakultet6)
         keyboard.add(Fakultet7)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id,'Таңдаңыз!', reply_markup=keyboard)
-        bot.register_next_step_handler(send,third)
+        send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
+        bot.register_next_step_handler(send, third)
     else:
-        bot.send_message(message.chat.id,'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
+        bot.send_message(message.chat.id, 'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
 
 
 @bot.message_handler(content_types=['text'])
 def third(message):
     """===============================Fakultetter==================================================="""
-    #=================================FAKULTET_1========================================================
+    # =================================FAKULTET_1========================================================
     if message.text == Fakultet1:
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
@@ -72,12 +78,13 @@ def third(message):
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF1)
 
-    
+
 def fakultetF1(message):
     if message.text == kezekInBtn:
-        cursor.execute("CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255))")
-        
-
+        sql = "INSERT INTO db_f_1 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)"
+        val = ("12345", "John", "Highway", "Testing")
+        cursor.execute(sql, val)
+        connection.commit()
 
 
 @server.route('/' + TOKEN, methods=['POST'])

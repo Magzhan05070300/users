@@ -81,10 +81,12 @@ def third(message):
 
 def fakultetF1(message):
     if message.text == kezekInBtn:
+        bot.send_message(message.chat.id, "HELLO")
+        """
         sql = "INSERT INTO db_f_1 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)"
         val = ("12345", "John", "Highway", "Testing")
         cursor.execute(sql, val)
-        connection.commit()
+        connection.commit()"""
 
 
 @server.route('/' + TOKEN, methods=['POST'])

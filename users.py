@@ -30,14 +30,9 @@ contents = repo.get_contents("db/database.sql")"""
 connection = mysql.connector.connect(host="194.39.67.203",
                                      user="jelastic-5256352", 
                                      password="O60BFWSCBLbn4yJJiWJ3",
-                                     database='mydb')"""
+                                     database='mydb')
 
-
-cnx = mysql.connector.connect(host="194.39.67.203",port="3306",database='mydb')
-cnx = MySQLConnection(user="jelastic-5256352",password="O60BFWSCBLbn4yJJiWJ3")
-
-# conn = sqlite3.connect(contents.sha, check_same_thread=False)
-#cursor = connection.cursor()
+cursor = connection.cursor()"""
 
 
 @bot.message_handler(commands=['start'])

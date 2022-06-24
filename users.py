@@ -70,7 +70,6 @@ Fakultet7 = "Магистратура және Докторантура"
 
 kezekInBtn = "Кезекке тұру"
 kezekOutBtn = "Кезектен шығу"
-stopBot = "Ботты тоқтату"
 homePage = "Бастапқы бетке оралу"
 showKezek = "Нөмір қабылдануда!"
 """
@@ -100,7 +99,6 @@ def second(message):
         keyboard.add(Fakultet5)
         keyboard.add(Fakultet6)
         keyboard.add(Fakultet7)
-        keyboard.add(homePage)
         send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
         bot.register_next_step_handler(send, third)
     else:
@@ -117,7 +115,6 @@ def third(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id,
                                 'Кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
@@ -129,7 +126,6 @@ def third(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id,
                                 'Кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
@@ -141,7 +137,6 @@ def third(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id,
                                 'Кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
@@ -153,7 +148,6 @@ def third(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id,
                                 'Кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
@@ -165,7 +159,6 @@ def third(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id,
                                 'Кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
@@ -177,7 +170,6 @@ def third(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id,
                                 'Кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
@@ -189,7 +181,6 @@ def third(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id,
                                 'Кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
@@ -223,7 +214,6 @@ def fakultetf1(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf1)
 
@@ -240,7 +230,6 @@ def fakultetf1(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf1)
 
@@ -254,7 +243,6 @@ def fakultetf1(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf1)
     elif message.text == kezekOutBtn:
@@ -268,7 +256,6 @@ def fakultetf1(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf1)
 
@@ -295,14 +282,13 @@ def fakultetf2(message):
         db_table_val2(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
         id_input = us_id
-        cursor.execute("SELECT id FROM db_f_1 WHERE user_id='%s';" % id_input)
+        cursor.execute("SELECT id FROM db_f_2 WHERE user_id='%s';" % id_input)
 
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf2)
 
@@ -325,7 +311,6 @@ def fakultetf2(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf2)
 
@@ -339,7 +324,6 @@ def fakultetf2(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf2)
     elif message.text == kezekOutBtn:
@@ -353,7 +337,6 @@ def fakultetf2(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf2)
 
@@ -378,14 +361,13 @@ def fakultetf3(message):
         db_table_val3(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
         id_input = us_id
-        cursor.execute("SELECT id FROM db_f_1 WHERE user_id='%s';" % id_input)
+        cursor.execute("SELECT id FROM db_f_3 WHERE user_id='%s';" % id_input)
 
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf3)
 
@@ -408,7 +390,6 @@ def fakultetf3(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf3)
 
@@ -422,7 +403,6 @@ def fakultetf3(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf3)
     elif message.text == kezekOutBtn:
@@ -436,7 +416,6 @@ def fakultetf3(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf3)
 
@@ -461,14 +440,13 @@ def fakultetf4(message):
         db_table_val4(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
         id_input = us_id
-        cursor.execute("SELECT id FROM db_f_1 WHERE user_id='%s';" % id_input)
+        cursor.execute("SELECT id FROM db_f_4 WHERE user_id='%s';" % id_input)
 
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf4)
 
@@ -491,7 +469,6 @@ def fakultetf4(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf4)
 
@@ -505,7 +482,6 @@ def fakultetf4(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf4)
     elif message.text == kezekOutBtn:
@@ -519,7 +495,6 @@ def fakultetf4(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf4)
 
@@ -544,14 +519,13 @@ def fakultetf5(message):
         db_table_val5(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
         id_input = us_id
-        cursor.execute("SELECT id FROM db_f_1 WHERE user_id='%s';" % id_input)
+        cursor.execute("SELECT id FROM db_f_5 WHERE user_id='%s';" % id_input)
 
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf5)
 
@@ -574,7 +548,6 @@ def fakultetf5(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf5)
 
@@ -588,7 +561,6 @@ def fakultetf5(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf5)
     elif message.text == kezekOutBtn:
@@ -602,7 +574,6 @@ def fakultetf5(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf5)
 
@@ -627,14 +598,13 @@ def fakultetf6(message):
         db_table_val6(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
         id_input = us_id
-        cursor.execute("SELECT id FROM db_f_1 WHERE user_id='%s';" % id_input)
+        cursor.execute("SELECT id FROM db_f_6 WHERE user_id='%s';" % id_input)
 
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf6)
 
@@ -657,7 +627,6 @@ def fakultetf6(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf6)
 
@@ -671,7 +640,6 @@ def fakultetf6(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf6)
     elif message.text == kezekOutBtn:
@@ -685,7 +653,6 @@ def fakultetf6(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf6)
 
@@ -710,14 +677,13 @@ def fakultetf7(message):
         db_table_val7(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
         id_input = us_id
-        cursor.execute("SELECT id FROM db_f_1 WHERE user_id='%s';" % id_input)
+        cursor.execute("SELECT id FROM db_f_7 WHERE user_id='%s';" % id_input)
 
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf7)
 
@@ -740,7 +706,6 @@ def fakultetf7(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf7)
 
@@ -754,7 +719,6 @@ def fakultetf7(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            keyboard.add(stopBot)
             send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetf7)
     elif message.text == kezekOutBtn:
@@ -768,7 +732,6 @@ def fakultetf7(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        keyboard.add(stopBot)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetf7)
 

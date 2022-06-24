@@ -23,37 +23,37 @@ def db_table_val1(user_id: int, user_name: str, user_surname: str, username: str
 
 
 def db_table_val2(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO db_f_2 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
+    cursor.execute('INSERT IGNORE INTO db_f_2 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
                    (user_id, user_name, user_surname, username))
     conn.commit()
 
 
 def db_table_val3(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO db_f_3 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
+    cursor.execute('INSERT IGNORE INTO db_f_3 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
                    (user_id, user_name, user_surname, username))
     conn.commit()
 
 
 def db_table_val4(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO db_f_4 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
+    cursor.execute('INSERT IGNORE INTO db_f_4 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
                    (user_id, user_name, user_surname, username))
     conn.commit()
 
 
 def db_table_val5(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO db_f_5 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
+    cursor.execute('INSERT IGNORE INTO db_f_5 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
                    (user_id, user_name, user_surname, username))
     conn.commit()
 
 
 def db_table_val6(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO db_f_6 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
+    cursor.execute('INSERT IGNORE INTO db_f_6 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
                    (user_id, user_name, user_surname, username))
     conn.commit()
 
 
 def db_table_val7(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO db_f_7 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
+    cursor.execute('INSERT IGNORE INTO db_f_7 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
                    (user_id, user_name, user_surname, username))
     conn.commit()
 

@@ -33,7 +33,7 @@ connection = mysql.connector.connect(host="node45189-env-9453381.jcloud.kz",
                                      database='mydb')
 
 # conn = sqlite3.connect(contents.sha, check_same_thread=False)
-cursor = connection.cursor()
+#cursor = connection.cursor()
 
 
 @bot.message_handler(commands=['start'])

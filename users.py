@@ -27,7 +27,7 @@ g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")
 contents = repo.get_contents("db/database.sql")"""
 
-connection = mysql.connector.connect(host="10.0.9.209",
+connection = mysql.connector.connect(host="194.39.67.203",
                                      user="jelastic-5256352", 
                                      password="O60BFWSCBLbn4yJJiWJ3",
                                      database='mydb')

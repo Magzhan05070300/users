@@ -71,7 +71,7 @@ Fakultet7 = "Магистратура және Докторантура"
 kezekInBtn = "Кезекке тұру"
 kezekOutBtn = "Кезектен шығу"
 homePage = "Бастапқы бетке оралу"
-showKezek = "Нөмір қабылдануда!"
+showKezek = "Келесі қабылданады!"
 """
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")

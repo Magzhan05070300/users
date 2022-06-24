@@ -17,7 +17,7 @@ cursor = conn.cursor()
 
 
 def db_table_val1(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO db_f_1 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
+    cursor.execute('INSERT OR IGNORE INTO db_f_1 (user_id, user_name, user_surname, username) VALUES (%s, %s, %s, %s)',
                    (user_id, user_name, user_surname, username))
     conn.commit()
 
@@ -215,8 +215,8 @@ def fakultetf1(message):
         for result in cursor:
             print(result[0])
 
-        bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
-        bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+            bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
+            bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
 
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)

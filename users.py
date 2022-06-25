@@ -199,16 +199,16 @@ def fakultetf1(message):
         username = message.from_user.username
 
         db_table_val1(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
-        conn.commit()
+
         id_input = us_id
         cursor.execute("SELECT id FROM db_f_1 WHERE user_id='%s';" % id_input)
-        conn.commit()
+
         for result in cursor:
             print(result[0])
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
-            conn.commit()
+
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)

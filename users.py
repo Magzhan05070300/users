@@ -71,7 +71,7 @@ Fakultet7 = "Магистратура және Докторантура"
 kezekInBtn = "Кезекке тұру"
 kezekOutBtn = "Кезектен шығу"
 homePage = "Бастапқы бетке оралу"
-showKezek = "Нөмір қабылдануда!"
+showKezek = "Келесі қабылданады!"
 """
 g = Github("magzhan.iitu.kz@mail.ru", "Qwerty1201199445")
 repo = g.get_repo("Magzhan05070300/users")
@@ -249,7 +249,7 @@ def fakultetf1(message):
         us_id = message.from_user.id
         id_input = us_id
         cursor.execute("DELETE FROM db_f_1 WHERE user_id='%s';" % id_input)
-        #conn.commit()
+        conn.commit()
         bot.send_message(message.chat.id, "Кезектен шықтыңыз!")
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kezekInBtn)

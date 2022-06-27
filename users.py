@@ -218,7 +218,7 @@ def fakultetf1(message):
         bot.register_next_step_handler(send, fakultetf1)
 
     elif message.text == showKezek:
-        cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
+        cursor.execute("SELECT COUNT(*) FROM db_f_1")
         check_for_null = cursor.fetchall()
         print(check_for_null)
         if check_for_null[0][0] == 0:
@@ -237,7 +237,7 @@ def fakultetf1(message):
             cursor.execute("SELECT id FROM db_f_1 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "келесі Қабылданады: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
@@ -318,7 +318,7 @@ def fakultetf2(message):
             cursor.execute("SELECT id FROM db_f_2 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "келесі Қабылданады: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
@@ -397,7 +397,7 @@ def fakultetf3(message):
             cursor.execute("SELECT id FROM db_f_3 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "келесі Қабылданады: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
@@ -476,7 +476,7 @@ def fakultetf4(message):
             cursor.execute("SELECT id FROM db_f_4 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "келесі Қабылданады: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
@@ -555,7 +555,7 @@ def fakultetf5(message):
             cursor.execute("SELECT id FROM db_f_5 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "келесі Қабылданады: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
@@ -634,7 +634,7 @@ def fakultetf6(message):
             cursor.execute("SELECT id FROM db_f_6 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "келесі Қабылданады: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
@@ -713,7 +713,7 @@ def fakultetf7(message):
             cursor.execute("SELECT id FROM db_f_7 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "келесі Қабылданады: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)

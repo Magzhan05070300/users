@@ -4,8 +4,8 @@ import sqlite3
 import telebot
 from telebot import types
 
-TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
-APP_URL = f'https://jenpulineochered.herokuapp.com/{TOKEN}'
+TOKEN = '5591676559:AAEU5XlHxGuz3fq0vdDkjCS9o3coT5o1JKg'
+APP_URL = f'https://quqpuline.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 server = Flask(__name__)
 
@@ -78,7 +78,7 @@ def first(message):
     keyboard.add('Мәзір')
     send = bot.send_message(message.chat.id,
                             'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                            'өз факультетіңізді таңдаңыз!', 
+                            'өз факультетіңізді таңдаңыз!',
                             reply_markup=keyboard)
     bot.register_next_step_handler(send, second)
 
@@ -99,6 +99,8 @@ def second(message):
     else:
         bot.send_message(message.chat.id, 'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
 
+
+@bot.message_handler(content_types=['text'])
 def third(message):
     """===============================Fakultetter==================================================="""
     # =================================FAKULTET_1========================================================
@@ -258,7 +260,7 @@ def fakultetF1(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
                                 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!', 
+                                'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
     """=================================FINISH======================================================"""
@@ -339,7 +341,7 @@ def fakultetF2(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
                                 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!', 
+                                'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -360,6 +362,7 @@ def fakultetF3(message):
         keyboard.add(kezekInBtn)
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
+        keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF3)
 
@@ -417,7 +420,7 @@ def fakultetF3(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
                                 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!', 
+                                'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -496,7 +499,7 @@ def fakultetF4(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
                                 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!', 
+                                'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -575,7 +578,7 @@ def fakultetF5(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
                                 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!', 
+                                'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -654,7 +657,7 @@ def fakultetF6(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
                                 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!', 
+                                'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -733,7 +736,7 @@ def fakultetF7(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
                                 'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!', 
+                                'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 

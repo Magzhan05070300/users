@@ -74,119 +74,6 @@ kelesi = "Келесі"
 conn = sqlite3.connect('db/database.db', check_same_thread=False)
 cursor = conn.cursor()
 
-"""--------------------------A---D--M--I--N----------------------------------------------------"""
-
-
-@bot.message_handler(commands=['restartkezek'])
-def firstadmin(message):
-    keyboard = types.ReplyKeyboardMarkup(True, False)
-    keyboard.add('Мәзір')
-    send = bot.send_message(message.chat.id, 'Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
-                                             'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!',
-                            reply_markup=keyboard)
-    bot.register_next_step_handler(send, secondadmin)
-
-
-def secondadmin(message):
-    if message.text == 'Мәзір':
-        keyboard = types.ReplyKeyboardMarkup(True, False)
-        keyboard.add(Fakultet1)
-        keyboard.add(Fakultet2)
-        keyboard.add(Fakultet3)
-        keyboard.add(Fakultet4)
-        keyboard.add(Fakultet5)
-        keyboard.add(Fakultet6)
-        keyboard.add(Fakultet7)
-        send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
-        bot.register_next_step_handler(send, thirdadmin)
-    else:
-        bot.send_message(message.chat.id, 'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
-
-
-def thirdadmin(message):
-    """===============================Fakultetter==================================================="""
-    # =================================FAKULTET_1========================================================
-    if message.text == Fakultet1:
-        keyboard = types.ReplyKeyboardMarkup(True, False)
-        keyboard.add(kelesi)
-        keyboard.add(homePage)
-        send = bot.send_message(message.chat.id,
-                                'Келесі батырмасын басып, кезек қабылдаңыз!',
-                                reply_markup=keyboard)
-        bot.register_next_step_handler(send, second_page_fakultet_f1)
-
-    """=================================FINISH======================================================"""
-    """===============================Fakultetter==================================================="""
-
-
-def second_page_fakultet_f1(message):
-    if message.text == kelesi:
-        cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
-        check_for_null = cursor.fetchall()
-        print(check_for_null)
-        if check_for_null[0][0] == 0:
-            print("Table no contents")
-            bot.send_message(message.chat.id, "Кезекте студент жоқ!")
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(kelesi)
-            keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
-            bot.register_next_step_handler(send, second_page_fakultet_f1)
-        else:
-            """=============================USER ID===================================="""
-            cursor.execute("SELECT id FROM db_f_1 LIMIT 1")
-            for get_user_id in cursor:
-                print(get_user_id[0])
-                bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_1 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_1 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
-
-            cursor.execute("SELECT user_id FROM db_f_1 LIMIT 1")
-            for results in cursor:
-                print(results[0])
-                # bot.send_message(message.chat.id, results[0])
-                """==============API-KEY======================================"""
-
-                api_key = "5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE"
-                bots = telebot.TeleBot(api_key)
-
-                bots.send_message(chat_id=results[0],
-                                  text='Сіздің кезегіңіз келді! '
-                                       '\n101-кабинетте күтеміз!'
-                                       '\n5 минутта келмесеңіз,'
-                                       '\nкезегіңіз жоғалады!')
-                """==========================================================="""
-
-                cursor.execute("DELETE FROM db_f_1 WHERE user_id=?", (results[0],))
-                conn.commit()
-
-                keyboard = types.ReplyKeyboardMarkup(True, False)
-                keyboard.add(kelesi)
-                keyboard.add(homePage)
-                send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
-                bot.register_next_step_handler(send, second_page_fakultet_f1)
-
-
-"""--------------------------U--S--E--R--------------------------------------------------------"""
-
 
 @bot.message_handler(commands=['start'])
 def first(message):
@@ -854,6 +741,120 @@ def fakultetF7(message):
                                 'өз факультетіңізді таңдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
+
+
+"""--------------------------A---D--M--I--N----------------------------------------------------"""
+
+
+@bot.message_handler(commands=['restartkezek'])
+def firstadmin(message):
+    keyboard = types.ReplyKeyboardMarkup(True, False)
+    keyboard.add('Мәзір')
+    send = bot.send_message(message.chat.id, 'Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
+                                             'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!',
+                            reply_markup=keyboard)
+    bot.register_next_step_handler(send, secondadmin)
+
+
+def secondadmin(message):
+    if message.text == 'Мәзір':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add(Fakultet1)
+        keyboard.add(Fakultet2)
+        keyboard.add(Fakultet3)
+        keyboard.add(Fakultet4)
+        keyboard.add(Fakultet5)
+        keyboard.add(Fakultet6)
+        keyboard.add(Fakultet7)
+        send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
+        bot.register_next_step_handler(send, thirdadmin)
+    else:
+        bot.send_message(message.chat.id, 'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
+
+
+def thirdadmin(message):
+    """===============================Fakultetter==================================================="""
+    # =================================FAKULTET_1========================================================
+    if message.text == Fakultet1:
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add(kelesi)
+        keyboard.add(homePage)
+        send = bot.send_message(message.chat.id,
+                                'Келесі батырмасын басып, кезек қабылдаңыз!',
+                                reply_markup=keyboard)
+        bot.register_next_step_handler(send, second_page_fakultet_f1)
+
+    """=================================FINISH======================================================"""
+    """===============================Fakultetter==================================================="""
+
+
+def second_page_fakultet_f1(message):
+    if message.text == kelesi:
+        cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "Кезекте студент жоқ!")
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(kelesi)
+            keyboard.add(homePage)
+            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
+            bot.register_next_step_handler(send, second_page_fakultet_f1)
+        else:
+            """=============================USER ID===================================="""
+            cursor.execute("SELECT id FROM db_f_1 LIMIT 1")
+            for get_user_id in cursor:
+                print(get_user_id[0])
+                bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
+            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
+            cursor.execute("SELECT user_name FROM db_f_1 LIMIT 1")
+            for check_name_null in cursor:
+                print(check_name_null[0])
+                if check_name_null[0] is None:
+                    print("NULL")
+                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
+                else:
+                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
+            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
+            cursor.execute("SELECT user_surname FROM db_f_1 LIMIT 1")
+            for check_sname_null in cursor:
+                print(check_sname_null[0])
+                if check_sname_null[0] is None:
+                    print("NULL")
+                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
+                else:
+                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
+            """=========================================================================="""
+            """==================USER_ID================================================="""
+
+            cursor.execute("SELECT user_id FROM db_f_1 LIMIT 1")
+            for results in cursor:
+                print(results[0])
+                # bot.send_message(message.chat.id, results[0])
+                """==============API-KEY======================================"""
+
+                api_key = "5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE"
+                bots = telebot.TeleBot(api_key)
+
+                bots.send_message(chat_id=results[0],
+                                  text='Сіздің кезегіңіз келді! '
+                                       '\n101-кабинетте күтеміз!'
+                                       '\n5 минутта келмесеңіз,'
+                                       '\nкезегіңіз жоғалады!')
+                """==========================================================="""
+
+                cursor.execute("DELETE FROM db_f_1 WHERE user_id=?", (results[0],))
+                conn.commit()
+
+                keyboard = types.ReplyKeyboardMarkup(True, False)
+                keyboard.add(kelesi)
+                keyboard.add(homePage)
+                send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
+                bot.register_next_step_handler(send, second_page_fakultet_f1)
+
+
+"""--------------------------U--S--E--R--------------------------------------------------------"""
 
 
 @server.route('/' + TOKEN, methods=['POST'])

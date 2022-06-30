@@ -99,8 +99,6 @@ def second(message):
     else:
         bot.send_message(message.chat.id, 'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
 
-
-@bot.message_handler(content_types=['text'])
 def third(message):
     """===============================Fakultetter==================================================="""
     # =================================FAKULTET_1========================================================

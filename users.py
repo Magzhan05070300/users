@@ -110,8 +110,6 @@ def first(message):
     keyboard = types.ReplyKeyboardMarkup(True, False)
     keyboard.add('Мәзір')
     send = bot.send_message(message.chat.id,
-                            'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                            'өз факультетіңізді таңдаңыз!\n\n'
                             '*(1) Сикинбаев Бауыржан*\n'
                             'В020 Арнайы педагогика\n'
                             'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -157,7 +155,10 @@ def first(message):
                             '*(10) Бейсенбаева Назерке*\n'
                             'Кәсіби білім беру колледжі\n\n'
                             '*(11) Әбділла Мағжан*\n'
-                            'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                            'Магистратура және докторантура\n\n'
+                            '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                            'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                            parse_mode='Markdown', reply_markup=keyboard)
     bot.register_next_step_handler(send, second)
 
 
@@ -178,7 +179,7 @@ def second(message):
         send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
         bot.register_next_step_handler(send, third)
     else:
-        send = bot.send_message(message.chat.id, 'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
         bot.register_next_step_handler(send, second)
 
 
@@ -192,7 +193,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF1)
 
@@ -203,7 +204,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF2)
 
@@ -214,7 +215,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF3)
 
@@ -225,7 +226,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF4)
 
@@ -236,7 +237,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF5)
 
@@ -247,7 +248,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF6)
 
@@ -258,7 +259,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF7)
 
@@ -269,7 +270,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF8)
 
@@ -280,7 +281,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF9)
 
@@ -291,7 +292,7 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF10)
 
@@ -302,9 +303,13 @@ def third(message):
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id,
-                                'Кезекке тұрсаңаз болады!',
+                                'Кезек батырмасын басып, кезекке тұрсаңаз болады!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF11)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second)
 
     # =================================FAKULTET_2========================================================
 
@@ -329,7 +334,7 @@ def fakultetF1(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF1)
 
         for result in cursor:
@@ -351,20 +356,20 @@ def fakultetF1(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF1)
 
         else:
             cursor.execute("SELECT id FROM db_f_1 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF1)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -385,8 +390,6 @@ def fakultetF1(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -432,7 +435,10 @@ def fakultetF1(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
     """=================================FINISH======================================================"""
     """===============================Fakultetter==================================================="""
@@ -455,7 +461,7 @@ def fakultetF2(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF2)
 
         for result in cursor:
@@ -484,13 +490,13 @@ def fakultetF2(message):
             cursor.execute("SELECT id FROM db_f_2 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF2)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -503,7 +509,7 @@ def fakultetF2(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF2)
 
         # =====================================HOME PAGE==========================================================
@@ -511,8 +517,6 @@ def fakultetF2(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -558,7 +562,10 @@ def fakultetF2(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -579,7 +586,7 @@ def fakultetF3(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF3)
 
         for result in cursor:
@@ -601,20 +608,20 @@ def fakultetF3(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF3)
 
         else:
             cursor.execute("SELECT id FROM db_f_3 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF3)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -627,7 +634,7 @@ def fakultetF3(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF3)
 
         # =====================================HOME PAGE==========================================================
@@ -635,8 +642,6 @@ def fakultetF3(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -682,7 +687,10 @@ def fakultetF3(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -703,7 +711,7 @@ def fakultetF4(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF4)
 
         for result in cursor:
@@ -725,20 +733,20 @@ def fakultetF4(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF4)
 
         else:
             cursor.execute("SELECT id FROM db_f_4 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF4)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -751,7 +759,7 @@ def fakultetF4(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF4)
 
         # =====================================HOME PAGE==========================================================
@@ -759,8 +767,6 @@ def fakultetF4(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -806,7 +812,10 @@ def fakultetF4(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -827,7 +836,7 @@ def fakultetF5(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF5)
 
         for result in cursor:
@@ -849,20 +858,20 @@ def fakultetF5(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF5)
 
         else:
             cursor.execute("SELECT id FROM db_f_5 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF5)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -875,7 +884,7 @@ def fakultetF5(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF5)
 
         # =====================================HOME PAGE==========================================================
@@ -883,8 +892,6 @@ def fakultetF5(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -930,7 +937,10 @@ def fakultetF5(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -951,7 +961,7 @@ def fakultetF6(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF6)
 
         for result in cursor:
@@ -973,20 +983,20 @@ def fakultetF6(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF6)
 
         else:
             cursor.execute("SELECT id FROM db_f_6 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF6)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -999,7 +1009,7 @@ def fakultetF6(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF6)
 
         # =====================================HOME PAGE==========================================================
@@ -1007,8 +1017,6 @@ def fakultetF6(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -1054,7 +1062,10 @@ def fakultetF6(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -1075,7 +1086,7 @@ def fakultetF7(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF7)
 
         for result in cursor:
@@ -1097,20 +1108,20 @@ def fakultetF7(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF7)
 
         else:
             cursor.execute("SELECT id FROM db_f_7 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF7)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -1123,7 +1134,7 @@ def fakultetF7(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF7)
 
         # =====================================HOME PAGE==========================================================
@@ -1131,8 +1142,6 @@ def fakultetF7(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -1178,7 +1187,10 @@ def fakultetF7(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -1199,7 +1211,7 @@ def fakultetF8(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF8)
 
         for result in cursor:
@@ -1221,20 +1233,20 @@ def fakultetF8(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF8)
 
         else:
             cursor.execute("SELECT id FROM db_f_8 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF8)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -1247,7 +1259,7 @@ def fakultetF8(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF8)
 
         # =====================================HOME PAGE==========================================================
@@ -1255,8 +1267,6 @@ def fakultetF8(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -1302,7 +1312,10 @@ def fakultetF8(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -1323,7 +1336,7 @@ def fakultetF9(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF9)
 
         for result in cursor:
@@ -1345,20 +1358,20 @@ def fakultetF9(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF9)
 
         else:
             cursor.execute("SELECT id FROM db_f_9 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF9)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -1371,7 +1384,7 @@ def fakultetF9(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF9)
 
         # =====================================HOME PAGE==========================================================
@@ -1379,8 +1392,6 @@ def fakultetF9(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -1426,7 +1437,10 @@ def fakultetF9(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -1447,7 +1461,7 @@ def fakultetF10(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF10)
 
         for result in cursor:
@@ -1469,20 +1483,20 @@ def fakultetF10(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF10)
 
         else:
             cursor.execute("SELECT id FROM db_f_10 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF10)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -1495,7 +1509,7 @@ def fakultetF10(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF10)
 
         # =====================================HOME PAGE==========================================================
@@ -1503,8 +1517,6 @@ def fakultetF10(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -1550,7 +1562,10 @@ def fakultetF10(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -1571,7 +1586,7 @@ def fakultetF11(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF11)
 
         for result in cursor:
@@ -1593,20 +1608,20 @@ def fakultetF11(message):
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF11)
 
         else:
             cursor.execute("SELECT id FROM db_f_11 LIMIT 1")
             for results in cursor:
                 print(results[0])
-                bot.send_message(message.chat.id, "Қабылдануда: " + str(results[0]))
+                bot.send_message(message.chat.id, "Келесі қабылданатын нөмір: " + str(results[0]))
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(kezekInBtn)
             keyboard.add(showKezek)
             keyboard.add(kezekOutBtn)
             keyboard.add(homePage)
-            send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
             bot.register_next_step_handler(send, fakultetF11)
     elif message.text == kezekOutBtn:
         us_id = message.from_user.id
@@ -1619,7 +1634,7 @@ def fakultetF11(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - - - - - - ', reply_markup=keyboard)
+        send = bot.send_message(message.chat.id, '', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF11)
 
         # =====================================HOME PAGE==========================================================
@@ -1627,8 +1642,6 @@ def fakultetF11(message):
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id,
-                                'Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Мәзірді басып, '
-                                'өз факультетіңізді таңдаңыз!\n\n'
                                 '*(1) Сикинбаев Бауыржан*\n'
                                 'В020 Арнайы педагогика\n'
                                 'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
@@ -1674,7 +1687,10 @@ def fakultetF11(message):
                                 '*(10) Бейсенбаева Назерке*\n'
                                 'Кәсіби білім беру колледжі\n\n'
                                 '*(11) Әбділла Мағжан*\n'
-                                'Магистратура және докторантура\n', parse_mode='Markdown', reply_markup=keyboard)
+                                'Магистратура және докторантура\n\n'
+                                '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
+                                'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
 
@@ -1685,9 +1701,9 @@ def fakultetF11(message):
 def firstadmin(message):
     keyboard = types.ReplyKeyboardMarkup(True, False)
     keyboard.add('Мәзір')
-    send = bot.send_message(message.chat.id, 'Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
-                                             'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!',
-                            reply_markup=keyboard)
+    send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
+                                             'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
+                            parse_mode='Markdown', reply_markup=keyboard)
     bot.register_next_step_handler(send, secondadmin)
 
 
@@ -1708,7 +1724,7 @@ def secondadmin(message):
         send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
         bot.register_next_step_handler(send, thirdadmin)
     else:
-        send = bot.send_message(message.chat.id, 'Төменде орналасқан \nмәзірдегі батырманы басыңыз')
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
         bot.register_next_step_handler(send, secondadmin)
 
 

@@ -3,6 +3,7 @@ from flask import Flask, request
 import sqlite3
 import telebot
 from telebot import types
+import emoji
 
 TOKEN = '5497810512:AAFI8DhRu4apgVAdyeID2ppPJSRQ7Oq0UhE'
 APP_URL = f'https://jenpulineochered.herokuapp.com/{TOKEN}'

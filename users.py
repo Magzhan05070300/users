@@ -1855,25 +1855,6 @@ def second_page_fakultet_f1(message):
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
             """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_1 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_1 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
 
             cursor.execute("SELECT user_id FROM db_f_1 LIMIT 1")
             for results in cursor:
@@ -1920,26 +1901,7 @@ def second_page_fakultet_f2(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_2 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_2 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+         
 
             cursor.execute("SELECT user_id FROM db_f_2 LIMIT 1")
             for results in cursor:
@@ -1986,26 +1948,7 @@ def second_page_fakultet_f3(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_3 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_3 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+      
 
             cursor.execute("SELECT user_id FROM db_f_3 LIMIT 1")
             for results in cursor:
@@ -2052,26 +1995,7 @@ def second_page_fakultet_f4(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_4 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_4 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+                
 
             cursor.execute("SELECT user_id FROM db_f_4 LIMIT 1")
             for results in cursor:
@@ -2118,26 +2042,7 @@ def second_page_fakultet_f5(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_5 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_5 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+   
 
             cursor.execute("SELECT user_id FROM db_f_5 LIMIT 1")
             for results in cursor:
@@ -2184,26 +2089,7 @@ def second_page_fakultet_f6(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_6 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_6 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+  
 
             cursor.execute("SELECT user_id FROM db_f_6 LIMIT 1")
             for results in cursor:
@@ -2250,26 +2136,7 @@ def second_page_fakultet_f7(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_7 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_7 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+    
 
             cursor.execute("SELECT user_id FROM db_f_7 LIMIT 1")
             for results in cursor:
@@ -2316,26 +2183,7 @@ def second_page_fakultet_f8(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_8 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_8 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+     
 
             cursor.execute("SELECT user_id FROM db_f_8 LIMIT 1")
             for results in cursor:
@@ -2382,26 +2230,7 @@ def second_page_fakultet_f9(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_9 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_9 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+         
 
             cursor.execute("SELECT user_id FROM db_f_9 LIMIT 1")
             for results in cursor:
@@ -2448,26 +2277,7 @@ def second_page_fakultet_f10(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_10 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_10 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+      
 
             cursor.execute("SELECT user_id FROM db_f_10 LIMIT 1")
             for results in cursor:
@@ -2514,26 +2324,7 @@ def second_page_fakultet_f11(message):
             for get_user_id in cursor:
                 print(get_user_id[0])
                 bot.send_message(message.chat.id, "Кезек нөмірі:  " + str(get_user_id[0]))
-            """==================USER_NAME CHECK FOR EXIST OR NONE======================="""
-            cursor.execute("SELECT user_name FROM db_f_11 LIMIT 1")
-            for check_name_null in cursor:
-                print(check_name_null[0])
-                if check_name_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Есімі:  " + "Есімі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Есімі:  " + str(check_name_null[0]))
-            """==================USER_SUR_NAME CHECK FOR EXIST OR NONE===================="""
-            cursor.execute("SELECT user_surname FROM db_f_11 LIMIT 1")
-            for check_sname_null in cursor:
-                print(check_sname_null[0])
-                if check_sname_null[0] is None:
-                    print("NULL")
-                    bot.send_message(message.chat.id, "Тегі:  " + "Тегі жазылмаған")
-                else:
-                    bot.send_message(message.chat.id, "Тегі:  " + str(check_sname_null[0]))
-            """=========================================================================="""
-            """==================USER_ID================================================="""
+          
 
             cursor.execute("SELECT user_id FROM db_f_11 LIMIT 1")
             for results in cursor:

@@ -335,7 +335,8 @@ def fakultetF1(message):
         keyboard.add(showKezek)
         keyboard.add(kezekOutBtn)
         keyboard.add(homePage)
-        bot.register_next_step_handler(fakultetF1)
+        send = bot.send_message(message.chat.id, ' ', reply_markup=keyboard)
+        bot.register_next_step_handler(send, fakultetF1)
 
         for result in cursor:
             print(result[0])

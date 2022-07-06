@@ -111,7 +111,7 @@ def first(message):
     keyboard = types.ReplyKeyboardMarkup(True, False)
     keyboard.add('Мәзір')
     send = bot.send_message(message.chat.id,
-                            '\U+20E3* Сикинбаев Бауыржан*\n'
+                            '\31E283A3 *Сикинбаев Бауыржан*\n'
                             'В020 Арнайы педагогика\n'
                             'В002 Мектепке дейінгі оқыту және тәрбиелеу\n\n'
                             '*(2) Таипова Зульфия*\n'

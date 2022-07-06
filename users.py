@@ -442,7 +442,13 @@ def fakultetF1(message):
                                                                                                                                          'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF1)
     """=================================FINISH======================================================"""
+
+
     """===============================Fakultetter==================================================="""
 
 
@@ -571,6 +577,10 @@ def fakultetF2(message):
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF2)
+
 
 def fakultetF3(message):
     if message.text == kezekInBtn:
@@ -696,6 +706,10 @@ def fakultetF3(message):
                                                                                                                                          'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF3)
 
 
 def fakultetF4(message):
@@ -823,6 +837,10 @@ def fakultetF4(message):
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF4)
+
 
 def fakultetF5(message):
     if message.text == kezekInBtn:
@@ -948,6 +966,10 @@ def fakultetF5(message):
                                                                                                                                          'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF5)
 
 
 def fakultetF6(message):
@@ -1075,6 +1097,10 @@ def fakultetF6(message):
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF6)
+
 
 def fakultetF7(message):
     if message.text == kezekInBtn:
@@ -1200,6 +1226,10 @@ def fakultetF7(message):
                                                                                                                                          'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF7)
 
 
 def fakultetF8(message):
@@ -1327,6 +1357,10 @@ def fakultetF8(message):
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF8)
+
 
 def fakultetF9(message):
     if message.text == kezekInBtn:
@@ -1452,6 +1486,10 @@ def fakultetF9(message):
                                                                                                                                          'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF9)
 
 
 def fakultetF10(message):
@@ -1579,6 +1617,10 @@ def fakultetF10(message):
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF10)
+
 
 def fakultetF11(message):
     if message.text == kezekInBtn:
@@ -1704,6 +1746,10 @@ def fakultetF11(message):
                                                                                                                                          'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, fakultetF11)
 
 
 """--------------------------A---D--M--I--N----------------------------------------------------"""
@@ -1842,6 +1888,11 @@ def thirdadmin(message):
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second_page_fakultet_f11)
 
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, secondadmin)
+
     """=================================FINISH======================================================"""
     """===============================Fakultetter==================================================="""
 
@@ -1892,6 +1943,17 @@ def second_page_fakultet_f1(message):
                 bot.register_next_step_handler(send, second_page_fakultet_f1)
 
 
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f1)
+
+
 def second_page_fakultet_f2(message):
     if message.text == kelesi:
         cursor.execute('''SELECT COUNT(*) FROM db_f_2''')
@@ -1935,6 +1997,17 @@ def second_page_fakultet_f2(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f2)
+
+
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f2)
 
 
 def second_page_fakultet_f3(message):
@@ -1982,6 +2055,17 @@ def second_page_fakultet_f3(message):
                 bot.register_next_step_handler(send, second_page_fakultet_f3)
 
 
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f3)
+
+
 def second_page_fakultet_f4(message):
     if message.text == kelesi:
         cursor.execute('''SELECT COUNT(*) FROM db_f_4''')
@@ -2025,6 +2109,18 @@ def second_page_fakultet_f4(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f4)
+
+
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f4)
 
 
 def second_page_fakultet_f5(message):
@@ -2072,6 +2168,17 @@ def second_page_fakultet_f5(message):
                 bot.register_next_step_handler(send, second_page_fakultet_f5)
 
 
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f5)
+
+
 def second_page_fakultet_f6(message):
     if message.text == kelesi:
         cursor.execute('''SELECT COUNT(*) FROM db_f_6''')
@@ -2115,6 +2222,19 @@ def second_page_fakultet_f6(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f6)
+
+
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f6)
+
 
 
 def second_page_fakultet_f7(message):
@@ -2162,6 +2282,18 @@ def second_page_fakultet_f7(message):
                 bot.register_next_step_handler(send, second_page_fakultet_f7)
 
 
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f7)
+
+
 def second_page_fakultet_f8(message):
     if message.text == kelesi:
         cursor.execute('''SELECT COUNT(*) FROM db_f_8''')
@@ -2205,6 +2337,17 @@ def second_page_fakultet_f8(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f8)
+
+
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f8)
 
 
 def second_page_fakultet_f9(message):
@@ -2251,6 +2394,16 @@ def second_page_fakultet_f9(message):
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f9)
 
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f9)
+
 
 def second_page_fakultet_f10(message):
     if message.text == kelesi:
@@ -2296,6 +2449,16 @@ def second_page_fakultet_f10(message):
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f10)
 
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f10)
+
 
 def second_page_fakultet_f11(message):
     if message.text == kelesi:
@@ -2340,6 +2503,18 @@ def second_page_fakultet_f11(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f11)
+
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id,'- - - - - - - - - - - - - - -', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
+    else:
+        send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
+        bot.register_next_step_handler(send, second_page_fakultet_f11)
+
+
 
 
 """--------------------------U--S--E--R--------------------------------------------------------"""

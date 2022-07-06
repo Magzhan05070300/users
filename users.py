@@ -80,7 +80,7 @@ def db_table_val11(user_id: int, user_name: str, user_surname: str, username: st
 
 """==============================================DATABASE_FINISH==================================================="""
 
-Fakultet1 = "Сикинбаев Бауыржан"
+Fakultet1 = "1️⃣ Сикинбаев Бауыржан"
 Fakultet2 = "Таипова Зульфия"
 Fakultet3 = "Орынбай Жансила"
 Fakultet4 = "Камысбаева Алия"

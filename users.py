@@ -147,7 +147,7 @@ def first(message):
                                                                                            'В014 География мұғалімдерін даярлау\n'
                                                                                            'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                            u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                    'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                    'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                     'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                     'В028 Хореография\n'
                                                                                                     'В092 Тынығу\n\n'
@@ -157,8 +157,8 @@ def first(message):
                                                                                                                          'Кәсіби білім беру колледжі\n\n'
                                                                                                                          u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                      'Магистратура және докторантура\n\n'
-                                                                                                                                     '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                     'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                     '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                     'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                             parse_mode='Markdown', reply_markup=keyboard)
     bot.register_next_step_handler(send, second)
 
@@ -353,6 +353,7 @@ def fakultetF1(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
@@ -395,6 +396,7 @@ def fakultetF1(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF1)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -438,7 +440,7 @@ def fakultetF1(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -448,8 +450,8 @@ def fakultetF1(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -487,6 +489,7 @@ def fakultetF2(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_2''')
@@ -529,6 +532,7 @@ def fakultetF2(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF2)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -572,7 +576,7 @@ def fakultetF2(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -582,8 +586,8 @@ def fakultetF2(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -617,6 +621,7 @@ def fakultetF3(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_3''')
@@ -659,6 +664,7 @@ def fakultetF3(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF3)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -702,7 +708,7 @@ def fakultetF3(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -712,8 +718,8 @@ def fakultetF3(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -747,6 +753,7 @@ def fakultetF4(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_4''')
@@ -789,6 +796,7 @@ def fakultetF4(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF4)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -832,7 +840,7 @@ def fakultetF4(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -842,8 +850,8 @@ def fakultetF4(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -877,6 +885,7 @@ def fakultetF5(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_5''')
@@ -919,6 +928,7 @@ def fakultetF5(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF5)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -962,7 +972,7 @@ def fakultetF5(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -972,8 +982,8 @@ def fakultetF5(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -1007,6 +1017,7 @@ def fakultetF6(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_6''')
@@ -1049,6 +1060,7 @@ def fakultetF6(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF6)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -1092,7 +1104,7 @@ def fakultetF6(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -1102,8 +1114,8 @@ def fakultetF6(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -1137,6 +1149,7 @@ def fakultetF7(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_7''')
@@ -1179,6 +1192,7 @@ def fakultetF7(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF7)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -1222,7 +1236,7 @@ def fakultetF7(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -1232,8 +1246,8 @@ def fakultetF7(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -1267,6 +1281,7 @@ def fakultetF8(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_8''')
@@ -1309,6 +1324,7 @@ def fakultetF8(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF8)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -1352,7 +1368,7 @@ def fakultetF8(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -1362,8 +1378,8 @@ def fakultetF8(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -1397,6 +1413,7 @@ def fakultetF9(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_9''')
@@ -1439,6 +1456,7 @@ def fakultetF9(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF9)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -1482,7 +1500,7 @@ def fakultetF9(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -1492,8 +1510,8 @@ def fakultetF9(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -1527,6 +1545,7 @@ def fakultetF10(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_10''')
@@ -1569,6 +1588,7 @@ def fakultetF10(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF10)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -1612,7 +1632,7 @@ def fakultetF10(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -1622,8 +1642,8 @@ def fakultetF10(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -1657,6 +1677,7 @@ def fakultetF11(message):
 
             bot.send_message(message.chat.id, 'Сіздің кезегіңіз қабылданды!')
             bot.send_message(message.chat.id, "Кезек нөмірі: " + str(result[0]))
+        conn.commit()
 
     elif message.text == showKezek:
         cursor.execute('''SELECT COUNT(*) FROM db_f_11''')
@@ -1699,6 +1720,7 @@ def fakultetF11(message):
         keyboard.add(homePage)
         send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
         bot.register_next_step_handler(send, fakultetF11)
+        conn.commit()
 
         # =====================================HOME PAGE==========================================================
     elif message.text == homePage:
@@ -1742,7 +1764,7 @@ def fakultetF11(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -1752,8 +1774,8 @@ def fakultetF11(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -1833,7 +1855,7 @@ def secondadmin(message):
                                                                                                'В014 География мұғалімдерін даярлау\n'
                                                                                                'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n\n'
                                                                                                u'8️⃣' + '*Бектемір Ақнұр*\n'
-                                                                                                        'В006 Музыка мғалімдерін даярлау\n'
+                                                                                                        'В006 Музыка мұғалімдерін даярлау\n'
                                                                                                         'В007 Көркем еңбек және сызу мұғалімдерін даярлау\n'
                                                                                                         'В028 Хореография\n'
                                                                                                         'В092 Тынығу\n\n'
@@ -1843,8 +1865,8 @@ def secondadmin(message):
                                                                                                                              'Кәсіби білім беру колледжі\n\n'
                                                                                                                              u'1️⃣1️⃣' + '*Әбділла Мағжан*\n'
                                                                                                                                          'Магистратура және докторантура\n\n'
-                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша , '
-                                                                                                                                         'өз мамандығыңызғв сәйкес техникалық хатшыныны мәзірден басып таңдаңыз!*',
+                                                                                                                                         '*Сәлеметсіз бе! Бұл қабылдау комиссиясына кезекке тұру боты! Тізім бойынша  '
+                                                                                                                                         'өз мамандығыңызға сәйкес техникалық хатшыны мәзірден басып таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, second)
 
@@ -2008,6 +2030,7 @@ def second_page_fakultet_f1(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f1)
+    conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2066,6 +2089,7 @@ def second_page_fakultet_f2(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f2)
+    conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2182,6 +2206,7 @@ def second_page_fakultet_f4(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f4)
+    conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2241,6 +2266,7 @@ def second_page_fakultet_f5(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f5)
+    conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2299,6 +2325,7 @@ def second_page_fakultet_f6(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f6)
+    conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2359,6 +2386,7 @@ def second_page_fakultet_f7(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f7)
+    conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2418,6 +2446,7 @@ def second_page_fakultet_f8(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f8)
+    conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2476,6 +2505,7 @@ def second_page_fakultet_f9(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f9)
+    conn.commit()
 
     elif message.text == '/restartkezek':
         keyboard = types.ReplyKeyboardMarkup(True, False)
@@ -2533,6 +2563,7 @@ def second_page_fakultet_f10(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f10)
+    conn.commit()
 
     elif message.text == '/restartkezek':
         keyboard = types.ReplyKeyboardMarkup(True, False)
@@ -2590,6 +2621,7 @@ def second_page_fakultet_f11(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f11)
+    conn.commit()
 
     elif message.text == '/restartkezek':
         keyboard = types.ReplyKeyboardMarkup(True, False)

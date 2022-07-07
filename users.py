@@ -2030,7 +2030,7 @@ def second_page_fakultet_f1(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f1)
-    conn.commit()
+        conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2089,7 +2089,7 @@ def second_page_fakultet_f2(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f2)
-    conn.commit()
+        conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2148,6 +2148,8 @@ def second_page_fakultet_f3(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f3)
+        conn.commit()
+        
 
 
     elif message.text == '/restartkezek':
@@ -2206,7 +2208,7 @@ def second_page_fakultet_f4(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f4)
-    conn.commit()
+        conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2266,7 +2268,7 @@ def second_page_fakultet_f5(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f5)
-    conn.commit()
+        conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2325,7 +2327,7 @@ def second_page_fakultet_f6(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f6)
-    conn.commit()
+        conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2386,7 +2388,7 @@ def second_page_fakultet_f7(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f7)
-    conn.commit()
+        conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2446,7 +2448,7 @@ def second_page_fakultet_f8(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f8)
-    conn.commit()
+        conn.commit()
 
 
     elif message.text == '/restartkezek':
@@ -2505,7 +2507,7 @@ def second_page_fakultet_f9(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f9)
-    conn.commit()
+        conn.commit()
 
     elif message.text == '/restartkezek':
         keyboard = types.ReplyKeyboardMarkup(True, False)
@@ -2563,7 +2565,7 @@ def second_page_fakultet_f10(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f10)
-    conn.commit()
+        conn.commit()
 
     elif message.text == '/restartkezek':
         keyboard = types.ReplyKeyboardMarkup(True, False)
@@ -2621,7 +2623,7 @@ def second_page_fakultet_f11(message):
                 keyboard.add(homePage2)
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f11)
-    conn.commit()
+        conn.commit()
 
     elif message.text == '/restartkezek':
         keyboard = types.ReplyKeyboardMarkup(True, False)

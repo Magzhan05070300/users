@@ -2222,6 +2222,14 @@ def thirdadmin(message):
             bot.register_next_step_handler(send, thirdadmin)
 
 
+    elif message.text == '/restartkezek':
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add('Мәзір')
+        send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
+                                                 'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
+                                parse_mode='Markdown', reply_markup=keyboard)
+        bot.register_next_step_handler(send, secondadmin)
+
 
     else:
         send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')

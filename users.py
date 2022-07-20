@@ -1986,21 +1986,9 @@ def thirdadmin(message):
         print(check_for_null)
         if check_for_null[0][0] == 0:
             print("Table no contents")
-            #bot.send_message(message.chat.id, "❌Сикинбаев Бауыржан: студент жоқ!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '❌Сикинбаев Бауыржан: студент жоқ!', reply_markup=keyboard)
-
+            bot.send_message(message.chat.id, "❌Сикинбаев Бауыржан: студент жоқ!")
         else:
-            #bot.send_message(message.chat.id, "✅Сикинбаев Бауыржан: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅Сикинбаев Бауыржан: студент бар!', reply_markup=keyboard)
-
+            bot.send_message(message.chat.id, "✅Сикинбаев Бауыржан: студент бар!")
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_2''')
         check_for_null = cursor.fetchall()
@@ -2008,21 +1996,8 @@ def thirdadmin(message):
         if check_for_null[0][0] == 0:
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Таипова Зульфия: студент жоқ!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Таипова Зульфия: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
-
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_3''')
         check_for_null = cursor.fetchall()
@@ -2030,21 +2005,8 @@ def thirdadmin(message):
         if check_for_null[0][0] == 0:
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Орынбай Жансила: студент жоқ!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Орынбай Жансила: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
-
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_4''')
         check_for_null = cursor.fetchall()
@@ -2053,19 +2015,8 @@ def thirdadmin(message):
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Камысбаева Алия: студент жоқ!")
 
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Камысбаева Алия: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_5''')
@@ -2075,19 +2026,8 @@ def thirdadmin(message):
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Алиева Жанат: студент жоқ!")
 
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Алиева Жанат: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_6''')
@@ -2097,18 +2037,8 @@ def thirdadmin(message):
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Шәмішова Айбану: студент жоқ!")
 
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Шәмішова Айбану: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
 
 
 
@@ -2119,18 +2049,8 @@ def thirdadmin(message):
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Чаргынова Гульзада: студент жоқ!")
 
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Чаргынова Гульзада: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
 
 
 
@@ -2141,19 +2061,8 @@ def thirdadmin(message):
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Бектемір Ақнұр: студент жоқ!")
 
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Бектемір Ақнұр: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_9''')
@@ -2163,18 +2072,8 @@ def thirdadmin(message):
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Ниязақынов Ердос: студент жоқ!")
 
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Ниязақынов Ердос: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
 
 
 
@@ -2184,21 +2083,8 @@ def thirdadmin(message):
         if check_for_null[0][0] == 0:
             print("Table no contents")
             bot.send_message(message.chat.id, "❌Бейсенбаева Назерке: студент жоқ!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
         else:
             bot.send_message(message.chat.id, "✅Бейсенбаева Назерке: студент бар!")
-
-            keyboard = types.ReplyKeyboardMarkup(True, False)
-            keyboard.add(TekseruBtn)
-            keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-
-
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_11''')
         check_for_null = cursor.fetchall()
@@ -2210,7 +2096,7 @@ def thirdadmin(message):
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '---------------------', reply_markup=keyboard)
             bot.register_next_step_handler(send, thirdadmin)
         else:
             bot.send_message(message.chat.id, "✅Әбділла Мағжан: студент бар!")
@@ -2218,7 +2104,7 @@ def thirdadmin(message):
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '---------------------', reply_markup=keyboard)
             bot.register_next_step_handler(send, thirdadmin)
 
 

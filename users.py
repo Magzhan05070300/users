@@ -1992,7 +1992,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+            
         else:
             bot.send_message(message.chat.id, "✅Сикинбаев Бауыржан: студент бар!")
 
@@ -2000,7 +2000,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_2''')
         check_for_null = cursor.fetchall()
@@ -2013,7 +2013,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Таипова Зульфия: студент бар!")
 
@@ -2021,7 +2021,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_3''')
@@ -2035,7 +2035,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Орынбай Жансила: студент бар!")
 
@@ -2043,7 +2043,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_4''')
@@ -2057,7 +2057,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Камысбаева Алия: студент бар!")
 
@@ -2065,7 +2065,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_5''')
@@ -2079,7 +2079,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Алиева Жанат: студент бар!")
 
@@ -2087,7 +2087,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_6''')
@@ -2101,7 +2101,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Шәмішова Айбану: студент бар!")
 
@@ -2109,7 +2109,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_7''')
@@ -2123,7 +2123,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Чаргынова Гульзада: студент бар!")
 
@@ -2131,7 +2131,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_8''')
@@ -2145,7 +2145,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Бектемір Ақнұр: студент бар!")
 
@@ -2153,7 +2153,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_9''')
@@ -2167,7 +2167,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Ниязақынов Ердос: студент бар!")
 
@@ -2175,7 +2175,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_10''')
@@ -2189,7 +2189,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
         else:
             bot.send_message(message.chat.id, "✅Бейсенбаева Назерке: студент бар!")
 
@@ -2197,7 +2197,7 @@ def thirdadmin(message):
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
             send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            bot.register_next_step_handler(send, thirdadmin)
+
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_11''')

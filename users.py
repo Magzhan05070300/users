@@ -180,7 +180,7 @@ def second(message):
         keyboard.add(Fakultet11)
         send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
         bot.register_next_step_handler(send, third)
-        
+
     elif message.text == '/restartkezek':
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add('Мәзір')
@@ -188,7 +188,7 @@ def second(message):
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
                                 parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
-        
+
     else:
         send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
         bot.register_next_step_handler(send, second)
@@ -460,7 +460,6 @@ def fakultetF1(message):
         send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
         bot.register_next_step_handler(send, fakultetF1)
     """=================================FINISH======================================================"""
-
 
     """===============================Fakultetter==================================================="""
 
@@ -1978,16 +1977,250 @@ def thirdadmin(message):
                                 'Келесі батырмасын басып, кезек қабылдаңыз!',
                                 reply_markup=keyboard)
         bot.register_next_step_handler(send, second_page_fakultet_f11)
-        
-        
+
+
+
     elif message.text == TekseruBtn:
-        keyboard = types.ReplyKeyboardMarkup(True, False)
-        keyboard.add(kelesi)
-        keyboard.add(homePage2)
-        send = bot.send_message(message.chat.id,
-                                'Келесі батырмасын басып, кезек қабылдаңыз!',
-                                reply_markup=keyboard)
-        bot.register_next_step_handler(send, second_page_fakultet_f11)
+        cursor.execute('''SELECT COUNT(*) FROM db_f_1''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Сикинбаев Бауыржан: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Сикинбаев Бауыржан: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_2''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Таипова Зульфия: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Таипова Зульфия: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_3''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Орынбай Жансила: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Орынбай Жансила: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_4''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Камысбаева Алия: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Камысбаева Алия: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_5''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Алиева Жанат: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Алиева Жанат: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_6''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Шәмішова Айбану: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Шәмішова Айбану: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_7''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Чаргынова Гульзада: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Чаргынова Гульзада: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_8''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Бектемір Ақнұр: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Бектемір Ақнұр: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_9''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Ниязақынов Ердос: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Ниязақынов Ердос: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_10''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Бейсенбаева Назерке: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Бейсенбаева Назерке: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
+
+        cursor.execute('''SELECT COUNT(*) FROM db_f_11''')
+        check_for_null = cursor.fetchall()
+        print(check_for_null)
+        if check_for_null[0][0] == 0:
+            print("Table no contents")
+            bot.send_message(message.chat.id, "❌Әбділла Мағжан: студент жоқ!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+        else:
+            bot.send_message(message.chat.id, "✅Әбділла Мағжан: студент бар!")
+
+            keyboard = types.ReplyKeyboardMarkup(True, False)
+            keyboard.add(TekseruBtn)
+            keyboard.add(homePage2)
+            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            bot.register_next_step_handler(send, thirdadmin)
+
 
 
     else:
@@ -2050,7 +2283,7 @@ def second_page_fakultet_f1(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
@@ -2109,7 +2342,7 @@ def second_page_fakultet_f2(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
@@ -2161,7 +2394,7 @@ def second_page_fakultet_f3(message):
                 send = bot.send_message(message.chat.id, '- - - - - - - - - - - - - - -', reply_markup=keyboard)
                 bot.register_next_step_handler(send, second_page_fakultet_f3)
         conn.commit()
-        
+
 
 
     elif message.text == '/restartkezek':
@@ -2169,7 +2402,7 @@ def second_page_fakultet_f3(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
@@ -2228,7 +2461,7 @@ def second_page_fakultet_f4(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
 
@@ -2288,7 +2521,7 @@ def second_page_fakultet_f5(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
@@ -2347,14 +2580,13 @@ def second_page_fakultet_f6(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
 
     else:
         send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
         bot.register_next_step_handler(send, second_page_fakultet_f6)
-
 
 
 def second_page_fakultet_f7(message):
@@ -2408,7 +2640,7 @@ def second_page_fakultet_f7(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
 
@@ -2468,7 +2700,7 @@ def second_page_fakultet_f8(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
@@ -2526,7 +2758,7 @@ def second_page_fakultet_f9(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
@@ -2584,7 +2816,7 @@ def second_page_fakultet_f10(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
@@ -2642,14 +2874,12 @@ def second_page_fakultet_f11(message):
         keyboard.add('Мәзір')
         send = bot.send_message(message.chat.id, '*Сәлеметсіз бе! \nБұл қабылдау комиссиясына кезекке қабылдау '
                                                  'боты!\nМәзірді басып, өз факультетіңізді таңдаңыз!*',
-                                parse_mode='Markdown', reply_markup=keyboard)        
+                                parse_mode='Markdown', reply_markup=keyboard)
         bot.register_next_step_handler(send, secondadmin)
 
     else:
         send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
         bot.register_next_step_handler(send, second_page_fakultet_f11)
-
-
 
 
 """--------------------------U--S--E--R--------------------------------------------------------"""

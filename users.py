@@ -91,6 +91,7 @@ Fakultet8 = "8️⃣ Бектемір Ақнұр"
 Fakultet9 = "9️⃣ Ниязақынов Ердос"
 Fakultet10 = "1️⃣0️⃣ Бейсенбаева Назерке"
 Fakultet11 = "1️⃣1️⃣ Әбділла Мағжан"
+TekseruBtn = "📟Тексеру📟"
 
 kezekInBtn = "Кезекке тұру"
 kezekOutBtn = "Кезектен шығу"
@@ -1811,6 +1812,7 @@ def secondadmin(message):
         keyboard.add(Fakultet9)
         keyboard.add(Fakultet10)
         keyboard.add(Fakultet11)
+        keyboard.add(TekseruBtn)
         send = bot.send_message(message.chat.id, 'Таңдаңыз!', reply_markup=keyboard)
         bot.register_next_step_handler(send, thirdadmin)
 
@@ -1969,6 +1971,16 @@ def thirdadmin(message):
         bot.register_next_step_handler(send, second_page_fakultet_f10)
 
     elif message.text == Fakultet11:
+        keyboard = types.ReplyKeyboardMarkup(True, False)
+        keyboard.add(kelesi)
+        keyboard.add(homePage2)
+        send = bot.send_message(message.chat.id,
+                                'Келесі батырмасын басып, кезек қабылдаңыз!',
+                                reply_markup=keyboard)
+        bot.register_next_step_handler(send, second_page_fakultet_f11)
+        
+        
+    elif message.text == TekseruBtn:
         keyboard = types.ReplyKeyboardMarkup(True, False)
         keyboard.add(kelesi)
         keyboard.add(homePage2)

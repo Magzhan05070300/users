@@ -2119,7 +2119,7 @@ def thirdadmin(message):
 
     else:
         send = bot.send_message(message.chat.id, 'Төменде орналасқан батырманы басыңыз')
-        bot.register_next_step_handler(send, secondadmin)
+        bot.register_next_step_handler(send, thirdadmin)
 
     """=================================FINISH======================================================"""
     """===============================Fakultetter==================================================="""

@@ -1986,20 +1986,20 @@ def thirdadmin(message):
         print(check_for_null)
         if check_for_null[0][0] == 0:
             print("Table no contents")
-            bot.send_message(message.chat.id, "❌Сикинбаев Бауыржан: студент жоқ!")
+            #bot.send_message(message.chat.id, "❌Сикинбаев Бауыржан: студент жоқ!")
 
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
-            
+            send = bot.send_message(message.chat.id, '❌Сикинбаев Бауыржан: студент жоқ!', reply_markup=keyboard)
+
         else:
-            bot.send_message(message.chat.id, "✅Сикинбаев Бауыржан: студент бар!")
+            #bot.send_message(message.chat.id, "✅Сикинбаев Бауыржан: студент бар!")
 
             keyboard = types.ReplyKeyboardMarkup(True, False)
             keyboard.add(TekseruBtn)
             keyboard.add(homePage2)
-            send = bot.send_message(message.chat.id, '✅✅✅✅✅✅✅✅✅', reply_markup=keyboard)
+            send = bot.send_message(message.chat.id, '✅Сикинбаев Бауыржан: студент бар!', reply_markup=keyboard)
 
 
         cursor.execute('''SELECT COUNT(*) FROM db_f_2''')
